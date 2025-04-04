@@ -1,0 +1,34 @@
+# ==============================================
+# 💠 HearthStone Plugin Configuration
+# ==============================================
+
+# Prefix used in all plugin messages
+config: 1.0.0
+
+# Enable or disable teleport cooldown
+cooldown:
+  enabled: true
+  seconds: 60  # Time players must wait before using /home again
+
+# Enable a short delay before teleportation (can cancel if moved)
+teleport_delay:
+  enabled: true
+  seconds: 5  # Time before teleportation starts
+
+# Sound effect when teleporting (use Minecraft sound names)
+teleport_sound: "ENTITY_ENDERMAN_TELEPORT"
+
+# Particle effect on teleport (use Bukkit particle names)
+teleport_particle: "PORTAL"
+
+# Messages shown to players
+messages:
+  set_home: "&aYour home has been set!"
+  home_teleporting: "&bTeleporting you home in &e{seconds}&b seconds..."
+  home_teleported: "&aWelcome home! 🏡"
+  no_home_set: "&cYou haven’t set a home yet. Use /sethome"
+  cooldown_active: "&cYou must wait &e{seconds}&c more seconds to use /home again."
+  teleport_cancelled: "&cTeleportation cancelled because you moved."
+
+# Should the plugin broadcast a message when it's enabled/disabled
+broadcast_status: true

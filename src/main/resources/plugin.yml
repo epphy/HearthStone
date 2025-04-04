@@ -1,4 +1,4 @@
 name: HearthStone
-version: '1.0'
+version: '1.0.0'
 main: ru.epphy.hearthStone.HearthStone
 api-version: '1.21'

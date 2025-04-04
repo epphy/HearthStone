@@ -1,12 +1,18 @@
 package ru.epphy.hearthStone;
 
 import org.bukkit.plugin.java.JavaPlugin;
+import ru.epphy.hearthStone.storage.PlayerHomesService;
 import ru.epphy.hearthStone.utility.LoggerUtil;
 
 public final class HearthStone extends JavaPlugin {
     @Override
     public void onEnable() {
+        loadServices();
         printStartMessage();
+    }
+
+    private void loadServices() {
+        PlayerHomesService.init(this);
     }
 
     private void printStartMessage() {
@@ -18,7 +24,12 @@ public final class HearthStone extends JavaPlugin {
 
     @Override
     public void onDisable() {
+        unloadServices();
         printStopMessage();
+    }
+
+    private void unloadServices() {
+        PlayerHomesService.unload();
     }
 
     private void printStopMessage() {
