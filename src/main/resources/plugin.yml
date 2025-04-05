@@ -2,3 +2,9 @@ name: HearthStone
 version: '1.0.0'
 main: ru.epphy.hearthStone.HearthStone
 api-version: '1.21'
+author: epphy
+
+commands:
+  hearthstone:
+    usage: /hearthstone [sethome/home] <home-name>
+    description: Manages players homes
